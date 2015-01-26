@@ -54,12 +54,10 @@ vjs.PosterImage.prototype.createEl = function(){
  */
 vjs.PosterImage.prototype.update = function(){
   var url = this.player().poster();
-
-  this.setSrc(url);
-
   // If there's no poster source we should display:none on this component
   // so it's not still clickable or right-clickable
   if (url) {
+    this.setSrc(url);
     this.show();
   } else {
     this.hide();
